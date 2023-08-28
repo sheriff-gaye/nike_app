@@ -16,14 +16,14 @@ const Hero = () => {
       <div className="relative  xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">Our summer collection </p>
         <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82] font-bold">
-          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 ">
+          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 dark:bg-transparent dark:text-coral-red ">
           The New Arrival
           </span>
           <br />
-          <span className="text-coral-red inline-block  mt-3">Nike </span>Shoes
+          <span className="text-coral-red inline-block  mt-3 dark:text-white">Nike </span>Shoes
           
            </h1>
-           <p className="text-slate-gray font-montserrat text-lg leading-8  mt-6 mb-14 sm:max-w-sm">Discover stylish nike arrivals , quality and comfort and innovation  for your active life.</p>
+           <p className="text-slate-gray font-montserrat text-lg leading-8  mt-6 mb-14 sm:max-w-sm dark:text-white ">Discover stylish nike arrivals , quality and comfort and innovation  for your active life.</p>
 
            <Button label="Show now" iconUrl={arrowRight}/>
 
@@ -31,8 +31,8 @@ const Hero = () => {
             {
               statistics.map((item,index)=>(
                 <div key={index}>
-                  <p className="text-4xl font-palanquin font-bold ">{item.value}</p>
-                  <p className="leading-7 font-montserrat text-slate-gray">{item.label}</p>
+                  <p className="text-4xl font-palanquin font-bold dark:text-white ">{item.value}</p>
+                  <p className="leading-7 font-montserrat text-slate-gray dark:text-white">{item.label}</p>
                 </div>
 
               ))

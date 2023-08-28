@@ -7,12 +7,33 @@ import SpecialOffer from "./sections/SpecialOffer";
 import CustomerReview from './sections/CustomerReview'
 import SuperQuality from "./sections/SuperQuality";
 import Nav from "./sections/Nav";
+import { useState,useEffect } from "react";
 
 export const App = () => {
+
+const[theme ,setTheme]=useState('light');
+
+useEffect(()=>{
+
+  if(theme==='dark'){
+    document.documentElement.classList.add("dark");
+
+  }
+  else{
+    document.documentElement.classList.remove("dark");
+
+  }
+},[theme])
+
+const handleClick = () =>{
+ 
+  setTheme(theme==='dark'? "light" : '')
+}
   
   return (
-    <main className="relative">
+    <main className="relative dark:bg-black">
       <Nav />
+      {/* <button onClick={handleClick} className="text-black dark:text-white">dark</button> */}
       <section className="xl:padding-l wide:padding-r padding-b">
         <Hero />
       </section>
