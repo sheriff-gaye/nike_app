@@ -1,37 +1,40 @@
+import { hamburger } from "../assets/icons";
+import { headerLogo } from "../assets/images";
+import { navLinks } from "../constants";
+import { Sun } from "../assets/icons/index";
+import { Moon } from "../assets/icons";
 
-import { hamburger } from '../assets/icons'
-import {headerLogo} from  '../assets/images'
-import { navLinks } from '../constants'
-import {BsMoonFill} from 'react-icons/bs'
-// import {IoMdDesktop} from 'react-icons/io'
 const Nav = () => {
   return (
-   <header className='padding-x py-8 absolute z-10 w-full'>
-    <nav  className='flex justify-between items-center max-container'>
-      <a href="/">
-      <img src={headerLogo} alt="logo" width={130} height={29}/>
-      </a>
-      <ul className='flex flex-1  justify-center items-center gap-16 max-lg:hidden'>
-        {navLinks.map((item)=>(
-          <li key={item.label}>
-            <a href={item.href} className='font-montserrat leading-normal text-lg text-slate-gray '>{item.label}</a>
-          </li>
-        ))}
-      </ul>
-      <div>
+    <header className="padding-x py-8 absolute z-10 w-full">
+      <nav className="flex justify-between items-center max-container">
+        <a href="/">
+          <img src={headerLogo} alt="logo" width={130} height={29} />
+        </a>
+        <ul className="flex flex-1  justify-center items-center gap-16 max-lg:hidden">
+          {navLinks.map((item) => (
+            <li key={item.label}>
+              <a
+                href={item.href}
+                className="font-montserrat leading-normal text-lg text-slate-gray "
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
         <div>
-          <button><BsMoonFill/></button>
-          {/* <button><IoMdDesktop/></button> */}
-         
+          {/* <div>
+            <button><Sun /></button>
+           <button> <Moon /></button>
+          </div> */}
         </div>
-        
-      </div>
-      <div className='hidden max-lg:block'>
-        <img src={hamburger} alt="menu"  width={25} height={25}/>
-      </div>
-    </nav>
-   </header>
-  )
-}
+        <div className="hidden max-lg:block">
+          <img src={hamburger} alt="menu" width={25} height={25} />
+        </div>
+      </nav>
+    </header>
+  );
+};
 
-export default Nav
+export default Nav;

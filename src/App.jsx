@@ -4,32 +4,27 @@ import PopularProducts from "./sections/PopularProducts";
 import Suscribe from "./sections/Suscribe";
 import Services from "./sections/Services";
 import SpecialOffer from "./sections/SpecialOffer";
-import CustomerReview from './sections/CustomerReview'
+import CustomerReview from "./sections/CustomerReview";
 import SuperQuality from "./sections/SuperQuality";
 import Nav from "./sections/Nav";
-import { useState,useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 export const App = () => {
+  // // const [theme, setTheme] = useState("light");
 
-const[theme ,setTheme]=useState('light');
+  // const darkMode = () => {
+  //   document.querySelector("body").setAttribute("data-theme", "dark");
+  // };
 
-useEffect(()=>{
+  // const lightMode = () => {
+  //   document.querySelector("body").setAttribute("data-theme", "light");
+  // };
 
-  if(theme==='dark'){
-    document.documentElement.classList.add("dark");
+  // darkMode();
 
-  }
-  else{
-    document.documentElement.classList.remove("dark");
 
-  }
-},[theme])
 
-const handleClick = () =>{
- 
-  setTheme(theme==='dark'? "light" : '')
-}
-  
+
   return (
     <main className="relative dark:bg-black">
       <Nav />
@@ -59,8 +54,7 @@ const handleClick = () =>{
         <Footer />
       </section>
     </main>
-   
-  )
-}
+  );
+};
 
 export default App;
