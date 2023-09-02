@@ -4,3 +4,4 @@
 <br>
 <p>Explore our latest Nike shoe collection for cutting-edge style, exceptional quality, and unmatched comfort, designed to elevate your active lifestyle</p>
 
+<img src="./src/assets/images/cover.jpeg">

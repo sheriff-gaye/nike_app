@@ -38,13 +38,13 @@ const Nav = () => {
           ))}
         </ul>
         <div>
-          <button className="text-3xl" onClick={handleTheme}>
+          <button className="text-3xl  dark:text-white" onClick={handleTheme}>
             {" "}
             {darkMode ? <BsMoonFill /> : <BsSun />}
           </button>
         </div>
 
-        <div className="hidden max-lg:block">
+        <div className="hidden max-lg:block dark:bg-white">
           <img src={hamburger} alt="menu" width={25} height={25} />
         </div>
       </nav>
