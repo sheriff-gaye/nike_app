@@ -1,10 +1,24 @@
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants";
-import { Sun } from "../assets/icons/index";
-import { Moon } from "../assets/icons";
+import { BsSun, BsMoonFill } from "react-icons/bs";
+import { useState,useEffect } from 'react';
+
 
 const Nav = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  const handleTheme = () => {
+    setDarkMode(!darkMode);
+  };
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
@@ -24,11 +38,12 @@ const Nav = () => {
           ))}
         </ul>
         <div>
-          {/* <div>
-            <button><Sun /></button>
-           <button> <Moon /></button>
-          </div> */}
+          <button className="text-3xl" onClick={handleTheme}>
+            {" "}
+            {darkMode ? <BsMoonFill /> : <BsSun />}
+          </button>
         </div>
+
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="menu" width={25} height={25} />
         </div>
