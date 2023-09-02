@@ -38,7 +38,7 @@ const Nav = () => {
           ))}
         </ul>
         <div>
-          <button className="text-3xl  dark:text-white" onClick={handleTheme}>
+          <button className="text-3xl " onClick={handleTheme}>
             {" "}
             {darkMode ? <BsMoonFill /> : <BsSun />}
           </button>
